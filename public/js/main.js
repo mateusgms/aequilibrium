@@ -11,7 +11,7 @@ angular.module("dashboardApp", ["minhasDiretivas", "ngAnimate", "ngRoute", "meus
          });
         $routeProvider.when("/selecaodegrupos", {
              templateUrl : "partials/selecao-grupos.html",
-             controller : "GruposController"
+             controller : "SelecaoController"
          });
          $routeProvider.when("/fotos", {
            templateUrl : "partials/principal.html",
