@@ -17,7 +17,10 @@ angular.module("dashboardApp", ["minhasDiretivas", "ngAnimate", "ngRoute", "meus
            templateUrl : "partials/principal.html",
            controller : "FotosController"
          });
-
+         $routeProvider.when("/atribuimes",{
+          templateUrl : "partials/atribui-mes.html",
+          controller : "SelecaoController"
+         });
          $routeProvider.when("/fotos/new", {
            templateUrl : "partials/foto.html",
            controller : "FotoController"
