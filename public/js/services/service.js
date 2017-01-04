@@ -1,32 +1,13 @@
-angular.module('meusServicos', ['ngRoute'])
-    .factory("recursoIndice", ['$http', function ($http) {
-                var serviceBase = 'services/';
-                var obj = {};
-                obj.getCustomers = function () {
-                    return $http.get(serviceBase + 'customers');
-                };
-                obj.getCustomer = function (customerID) {
-                    return $http.get(serviceBase + 'customer?id=' + customerID);
-                };
-
-                obj.insertCustomer = function (customer) {
-                    return $http.post(serviceBase + 'insertCustomer', customer).then(function (results) {
-                        return results;
-                    });
-                };
-
-                obj.updateCustomer = function (id, customer) {
-                    return $http.post(serviceBase + 'updateCustomer', {
-                        id: id,
-                        customer: customer
-                    }).then(function (status) {
-                        return status.data;
-                    });
-                };
-
-                obj.deleteCustomer = function (id) {
-                    return $http.delete(serviceBase + 'deleteCustomer?id=' + id).then(function (status) {
-                        return status.data;
-                    });
-                };
+angular.module('meusServicos', ['ngResource'])
+    .factory("recursoIndice", function($resource) {
+        return $resource("/", {}, {
+            get: {method: 'GET', cache: false, isArray: false},
+            save: {method: 'POST', cache: false, isArray: false},
+            update: {method: 'PUT', cache: false, isArray: false},
+            delete: {method: 'DELETE', cache: false, isArray: false}
+        })
+    .factory('listaIndices',['$resource', function(){
+        return $resource('/', {}, {
+            get: {method:'GET', cache: false, isArray: true}
+        });
     }]);

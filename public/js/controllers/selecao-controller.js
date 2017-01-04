@@ -11,8 +11,7 @@ angular.module("dashboardApp")
             }, function (erro) {
                 $scope.mensagem = "Não foi possível obter a foto";
             });
-        }
-
+        };
         $scope.submeter = function () {
             if ($scope.formulario.$valid) {
                 cadastroDeFotos.cadastrar($scope.indice)

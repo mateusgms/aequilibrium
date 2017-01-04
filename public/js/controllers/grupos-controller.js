@@ -7,4 +7,5 @@ angular.module("dashboardApp")
               .error(function(erro) {
                 console.log(erro);
               });
+         
        });

@@ -2,33 +2,28 @@
 <div class="content-wrapper">
     <section class="content">
         <div class="col-lg-8 col-xs-8">
-            <div class="box">
+            <div class="box" ng-controller="GruposController">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Informe-nos as datas de atualização</h3>
+                    <h3 class="box-title">Novo indice</h3>
+                    <h4>Insira aqui um novo indice para seu grupo!</h4>
                 </div>
                 <form novalidate name="formulario" ng-submit="submeter()">
                     <div class="box-body">
                         <div class="form-group">
-                            <label>Data a partir da qual os valores devem ser atualizados:</label>
-                            <div class="input-group date">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-calendar"></i>
-                                </div>
-                                <input type="text" class="form-control pull-right" id="datepicker">
-                            </div>
-                            <!-- /.input group -->
+                            <label>Nome</label>
+                            <input name="nome" class="form-control " ng-model="grupo.indice">
                         </div>
                         <div class="form-group">
-                            <label>Data para a qual o valor será atualizado:</label>
-                            <div class="input-group date">
+                            <label>Grupo:</label>
+                            <div class="input-group">
                                 <div class="input-group-addon">
-                                    <i class="fa fa-calendar"></i>
+                                    <i class="fa fa-check"></i>
                                 </div>
-                                <input type="text" class="form-control pull-right" id="datepicker">
+                                <select name="grupo" class="form-control" required  ng-model="indice.grupo" ng-options="grupo._id as (grupo.nome | uppercase) for grupo in grupos">
+                                    <option value="">Escolha um grupo de referencia</option>
+                                </select>
                             </div>
-                            <!-- /.input group -->
                         </div>
-                        
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer" ng-controller="NavCtrl">
