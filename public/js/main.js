@@ -29,9 +29,9 @@ angular.module("dashboardApp", ["minhasDiretivas", "ngAnimate", "ngRoute", "meus
           templateUrl : "partials/adiciona-indice.html",
           controller : "SelecaoController"
          });
-         $routeProvider.when("/fotos/new", {
-           templateUrl : "partials/foto.html",
-           controller : "FotoController"
+         $routeProvider.when("/resultadofinal", {
+           templateUrl : "partials/resultado-final.html",
+           controller : "SelecaoController"
          });
 
          $routeProvider.when("/fotos/edit/:fotoId", {
@@ -39,5 +39,5 @@ angular.module("dashboardApp", ["minhasDiretivas", "ngAnimate", "ngRoute", "meus
            controller : "FotoController"
          });
 
-         $routeProvider.otherwise({redirectTo : "/fotos"});
+         $routeProvider.otherwise({redirectTo : "/"});
        });
