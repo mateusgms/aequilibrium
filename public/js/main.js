@@ -13,10 +13,6 @@ angular.module("dashboardApp", ["minhasDiretivas", "ngAnimate", "ngRoute", "meus
              templateUrl : "partials/selecao-grupos.html",
              controller : "SelecaoController"
          });
-         $routeProvider.when("/fotos", {
-           templateUrl : "partials/principal.html",
-           controller : "FotosController"
-         });
          $routeProvider.when("/atribuimes",{
           templateUrl : "partials/atribui-mes.html",
           controller : "SelecaoController"
@@ -33,11 +29,5 @@ angular.module("dashboardApp", ["minhasDiretivas", "ngAnimate", "ngRoute", "meus
            templateUrl : "partials/resultado-final.html",
            controller : "SelecaoController"
          });
-
-         $routeProvider.when("/fotos/edit/:fotoId", {
-           templateUrl : "partials/foto.html",
-           controller : "FotoController"
-         });
-
          $routeProvider.otherwise({redirectTo : "/"});
        });
