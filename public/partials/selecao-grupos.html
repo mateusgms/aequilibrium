@@ -3,7 +3,7 @@
     <div class="content-wrapper">
         <section class="content">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="box box-primary">
                         <div class="box-header">
                             <h3 class="box-title">Adicione seus parâmetros:</h3>
@@ -16,7 +16,7 @@
                                         <div class="input-group-addon">
                                             <i class="fa fa-check"></i>
                                         </div>
-                                        <select name="grupo" class="form-control" required  ng-model="indice.grupo" ng-options="grupo._id as (grupo.nome | uppercase) for grupo in grupos">
+                                        <select name="grupo" class="form-control" required ng-model="indice.grupo" ng-options="grupo._id as (grupo.nome | uppercase) for grupo in grupos">
                                             <option value="">Escolha um grupo</option>
                                         </select>
                                     </div>
@@ -38,40 +38,63 @@
                                         <span ng-show="formulario.$submitted && formulario.valor.$error.required" class="form-control alert-danger">O valor não pode ser 0.</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="box-footer " ng-controller="NavCtrl">
-                                <a href="/" class="btn btn-primary">Voltar</a>
-                                <a type="submit" class="btn btn-primary" ng-disabled="formulario.$invalid">Salvar</a>
-                                <p ng-show="mensagem.length" class="alert alert-info">{{mensagem}}</p>
+                                <div class="form-group">
+                                    <label>Data a partir da qual os valores devem ser atualizados:</label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" class="form-control pull-right" id="datepicker" ng-model="indice.dataPartida" required>
+                                    </div>
+                                    <!-- /.input group -->
+                                </div>
+                                <div class="form-group">
+                                    <label>Data para a qual o valor será atualizado:</label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="date" class="form-control pull-right" id="datepicker" ng-model="indice.dataAtualizar" required>
+                                    </div>
+                                </div>
+                                <div class="box-footer " ng-controller="NavCtrl">
+                                    <a href="/" class="btn btn-primary">Voltar</a>
+                                    <a type="submit" class="btn btn-primary" ng-disabled="formulario.$invalid">Salvar</a>
+                                    <p ng-show="mensagem.length" class="alert alert-info">{{mensagem}}</p>
+                                </div>
+
                             </div>
                         </form>
                     </div>
-                    <!-- /.box -->
                 </div>
-                <div class="col-md-6">
-                    <div class="box">
+                <div class="col-md-8">
+                    <div class="box box-success">
                         <div class="box-header">
                             <h3 class="box-title">Relação de valores</h3>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body no-padding">
                             <table class="table table-striped">
-                                
+
                                 <tr>
                                     <th>Grupo</th>
                                     <th>Descrição</th>
                                     <th>valor</th>
+                                    <th>Data de Partida</th>
+                                    <th>Data para Atualizar</th>
                                 </tr>
                                 <tr>
                                     <td>{{indice.grupo}}</td>
                                     <td>{{indice.descricao}}</td>
                                     <td>{{indice.valor}}</td>
+                                    <td>{{indice.dataPartida}}</td>
+                                    <td>{{indice.dataAtualizar}}</td>
                                 </tr>
-                                
+
                             </table>
                         </div>
                         <div class="box-footer">
-                            <a href="/atribuimes" class="btn btn-success pull-right" type="submit">Calcular</a>
+                            <a href="/resultadofinal" class="btn btn-success pull-right" type="submit">Calcular</a>
                         </div>
                     </div>
                 </div>
