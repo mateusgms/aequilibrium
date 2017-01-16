@@ -1,0 +1,45 @@
+<menu-principal></menu-principal>
+<div class="content-wrapper">
+    <section class="content">
+        <div class="col-md-12">
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Informe-nos as datas de atualização</h3>
+                </div>
+                <form novalidate name="formulario" ng-submit="submeter()">
+                    <div class="box-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Indice</th>
+                                    <th>Selecionar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="grupo in grupos">
+
+                                    <td> <a style="color: #000;" href="/adicionavariacao/{{grupo.indice}}">{{grupo.indice}}</a></td>
+                                   
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer" ng-controller="NavCtrl">
+                       
+                    </div>
+                    <!-- /.box-footer-->
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+<rodape-principal></rodape-principal>
+<!-- <tbody>
+                                <tr data-ng-repeat="contrato in contratos">
+                                
+                                  <td> <a style="color: #000;" href="/selecaodegrupos/{{contrato.numero}}">{{contrato.numero}} </a></td>
+                                   <td> <a style="color: #000;" href="/selecaodegrupos/{{contrato.numero}}">{{contrato.nome}} </a></td>
+                                  
+                                    </tr>
+                              </tbody> -->

@@ -1,13 +1,25 @@
 angular.module('meusServicos', ['ngResource'])
-    .factory("recursoIndice", function($resource) {
-        return $resource("/", {}, {
-            get: {method: 'GET', cache: false, isArray: false},
-            save: {method: 'POST', cache: false, isArray: false},
-            update: {method: 'PUT', cache: false, isArray: false},
-            delete: {method: 'DELETE', cache: false, isArray: false}
-        })
-    .factory('listaIndices',['$resource', function(){
-        return $resource('/', {}, {
-            get: {method:'GET', cache: false, isArray: true}
+    .factory("RecursosItens", function ($resource) {
+        return $resource('contratos.json', {}, {
+            getData: {
+                method: 'GET',
+                isArray: false
+            }
         });
-    }]);
+    })
+    .factory('ListaContrato', function ($resource) {
+        return $resource('contratos.json', {}, {
+            getData: {
+                method: 'GET',
+                isArray: false
+            }
+        });
+    })
+ .factory('ListaGrupo', function ($resource) {
+        return $resource('grupoindice.json', {}, {
+            getData: {
+                method: 'GET',
+                isArray: false
+            }
+        });
+    });

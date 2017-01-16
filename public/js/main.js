@@ -9,13 +9,17 @@ angular.module("dashboardApp", ["minhasDiretivas", "ngAnimate", "ngRoute", "meus
              templateUrl : "partials/novo-contrato.html",
              controller : "ControllerContrato"
          });
-        $routeProvider.when("/selecaodegrupos", {
+        $routeProvider.when("/selecaodegrupos/:numero", {
              templateUrl : "partials/selecao-grupos.html",
-             controller : "SelecaoController"
+             controller : "ContratoController"
          });
-         $routeProvider.when("/atribuimes",{
-          templateUrl : "partials/atribui-mes.html",
-          controller : "SelecaoController"
+         $routeProvider.when("/listavariacao",{
+          templateUrl : "partials/lista-variacao.html",
+          controller : "GruposController"
+         });
+         $routeProvider.when("/adicionavariacao/:indice",{
+          templateUrl : "partials/adicionar-variacao.html",
+          controller : "GruposController"
          });
           $routeProvider.when("/novogrupo",{
           templateUrl : "partials/adiciona-grupo.html",

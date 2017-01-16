@@ -1,0 +1,75 @@
+<menu-principal></menu-principal>
+<div class="content-wrapper">
+    <section class="content">
+        <div class="col-md-6">
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Adicione uma nova variação</h3>
+                    <h4>Todos os campos são obrigatórios!</h4>
+                    <p>Indice atual: {{indice}}</p>
+                </div>
+                <form novalidate name="formulario" ng-submit="submeter()">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>Mês:</label>
+                            <input name="mes" class="form-control "type="number" 
+                                   min="01" max="12" ng-model="grupo.nome">
+                        </div>
+                        <div class="form-group">
+                            <label>Ano:</label>
+                            <input name="ano" class="form-control" min="1980" max="2030" >
+                        </div>
+                        <div class="form-group">
+                            <label>Variação:</label>
+                            <input name="mes" class="form-control " >
+                        </div>
+                    </div>
+                    <div class="box-footer" ng-controller="NavCtrl">
+                        <a href="/" class="btn btn-primary">Voltar</a>
+                        <a type="submit" class="btn btn-primary" ng-disabled="formulario.$invalid" href="/listavariacao" >Salvar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+       <div class="col-md-6">
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Informe-nos as datas de atualização</h3>
+                </div>
+                <form novalidate name="formulario" ng-submit="submeter()">
+                    <div class="box-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    
+                                    <th style="width: 10px">Mês</th>
+                                    <th style="width: 10px">Ano</th>
+                                    <th>Variação</th>
+                                    <th>Deseja remover?</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="grupo in grupos">
+
+                                    <td>{{grupo.mes}}</td>
+                                    <td>{{grupo.ano}}</td>
+                                    <td>{{grupo.variacao}}</td>
+                                    <td><a ng-click="acao()" href=""><i class="fa fa-ban"></i></a></td>
+                                  
+                                   
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer" ng-controller="NavCtrl">
+                       
+                    </div>
+                    <!-- /.box-footer-->
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+<rodape-principal></rodape-principal>

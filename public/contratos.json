@@ -1,0 +1,85 @@
+ {
+     "user":"Mateus Gomes",
+     "contratos": [
+         {
+             "nome": "Contratão",
+             "numero": 0,
+             "itens": [
+                 {
+                     "grupo": "Verduras",
+                     "valor": 100,
+                     "Descricao": "lorem"
+            },
+                 {
+                     "grupo": "Aço",
+                     "valor": 100,
+                     "Descricao": "ipsun"
+            },
+                 {
+                     "grupo": "Alguma coisa",
+                     "valor": 100,
+                     "Descricao": "lorem ipson"
+            }
+        ],
+             "dtInicio": "10/12/2017",
+             "dtFinal": "10/11/2018"
+    },
+         {
+             "nome": "Contratãozão",
+             "numero": 1,
+             "itens": [
+                 {
+                     "grupo": "Corrida",
+                     "valor": 1000,
+                     "Descricao": "alguma "
+        },
+                 {
+                     "grupo": "Alimenticio",
+                     "valor": 5000,
+                     "Descricao": "descricao"
+            },
+                 {
+                     "grupo": "Artigos em geral",
+                     "valor": 12,
+                     "Descricao": "algcricao"
+            },
+                 {
+                     "grupo": "Roupas",
+                     "valor": 1,
+                     "Descricao": "algescricao"
+            }
+        ],
+             "dtInicio": "21/01/2017",
+             "dtFinal": "10/02/2018"
+    },
+         {
+             "nome": "Contratin",
+             "numero": 2,
+             "itens": [
+                 {
+                     "grupo": "Comida",
+                     "valor": 100,
+                     "Descricao": "algumao"
+        },
+                 {
+                     "grupo": "Aluguel",
+                     "valor": 5,
+                     "Descricao": "algscricao"
+            },
+                 {
+                     "grupo": "Frete",
+                     "valor": 11,
+                     "Descricao": "algumacricao"
+            },
+                 {
+                     "grupo": "Transporte",
+                     "valor": 95,
+                     "Descricao": "alesricao"
+            }
+        ],
+             "dtInicio": "10/09/2017",
+             "dtFinal": "10/07/2018"
+    }
+
+]
+ }

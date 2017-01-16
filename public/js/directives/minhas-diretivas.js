@@ -1,18 +1,4 @@
 angular.module("minhasDiretivas", [])
-       .directive("minhaFoto", function() {
-         var ddo = {};
-
-         ddo.restrict = "AE";
-
-         ddo.scope = {
-           titulo : "@titulo",
-           url : "@url"
-         };
-
-         ddo.templateUrl = "js/directives/minha-foto.html";
-
-         return ddo;
-       })
        .directive("botaoExcluir", function() {
          var ddo = {};
 

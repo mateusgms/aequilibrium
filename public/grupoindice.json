@@ -1,21 +1,29 @@
 {
+        "grupos": [
         {
-            _id: 1, 
-            nome: 'Generos Alimenticios',
-            indice: 'algum indice',
-            valor: 123.25
+            "_id": 1,
+            "nome":"Generos Alimenticios",
+            "indice":"algum indice",
+            "mes":11,
+            "ano":2016,
+            "variacao":123.25
 
-        }, 
-        { 
-            _id: 2, 
-            nome: 'Frete de caminhões',
-            indice:'outro indice', 
-            valor: 1230.25
-        }, 
-        { 
-            _id: 3, 
-            nome: 'Aluguel de carro',
-            indice: 'mais um indice',
-            valor: 1023.25
+        },
+        {
+            "_id":2,
+            "nome":"Frete de caminhões",
+            "indice":"outro indice",
+            "mes":12,
+            "ano":2017,
+            "variacao":1230.25
+        },
+        {
+            "_id":3,
+            "nome":"Aluguel de carro",
+            "indice":"mais um indice",
+            "mes":10,
+            "ano":2017,
+            "variacao":1023.25
         }
+        ]
 }
